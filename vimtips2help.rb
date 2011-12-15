@@ -206,8 +206,7 @@ HEADER
 
     def tag_name(title, marker='*')
         tag = title.gsub(/\s+/, '-')
-        # tag.gsub!(/[*'"^&(){}\[\]]/, '_')
-        tag.gsub!(/[^a-zA-Z0-9_-]/, '_')
+        tag.gsub!(/[^a-zA-Z0-9_-]/, '')
         "#{marker}tip-#{tag}#{marker}"
     end
 
