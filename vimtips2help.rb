@@ -232,6 +232,7 @@ HEADER
         text.gsub!(/^#\s/, "#{INDENT}# ")
 
         text.gsub!(/(\s)\*(\S+?)\*(\s)/, "\\1*\\2#{@config[:cut_mark]}\\3") if @config[:convert_unintentional_tags]
+        text.gsub!(/\{\{script\|id=(\d+)\|text=(.*?)?(\|.*?)?\}\}/, '\\2 (vimscript#\\1)')
         text.gsub!(/\{\{script\|id=(\d+)(\|.*?)?\}\}/, 'vimscript#\\1')
         text.gsub!(/\{\{TipNew\n\|id=(\d+)\n(\|.*?)?\}\}/m, "URL: http://vim.wikia.com/wiki/VimTip\\1\n\n")
         text.gsub!(/\{\{help\|(.*?)\}\}/) do
