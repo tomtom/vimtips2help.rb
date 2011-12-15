@@ -150,6 +150,7 @@ class Vimtips2Help
                 }
             end
         end
+        puts; STDOUT.flush if $VERBOSE
         self
     end
 
