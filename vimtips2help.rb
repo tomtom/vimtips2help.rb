@@ -3,7 +3,7 @@
 # @Author:      Thomas Link (micathom AT gmail com)
 # @License:     GPL (see http://www.gnu.org/licenses/gpl.txt)
 # @Created:     2009-02-23.
-# @Last Change: 2010-03-28.
+# @Last Change: 2011-12-15.
 
 require 'hpricot'
 require 'cgi'
@@ -121,6 +121,7 @@ class Vimtips2Help
         @blacklist = [
             /^(User|Forum|Image|Help|Category|MediaWiki|Template)( talk)?:/,
             /^Talk:/,
+            /^File:/,
             /^Vim Tips Wiki/,
             /^NewCategoryIntro/,
             /^(News|Other Pages|Main Page|Sandbox|Tip Guidelines)$/,
